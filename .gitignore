@@ -1,0 +1,27 @@
+.env
+chroma.log
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.psql_history
+.sudo_as_admin_successful
+.gitconfig
+
+
+.cache/
+.local/
+terra-5/
+.ssh/
+venv/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+Terraform/custom-script.sh
+save-chat-test.py
+pdf_store/
+chroma_data/
+__pycache__/
+Terraform/save-chat-test.py

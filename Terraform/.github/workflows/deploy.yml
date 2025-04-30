@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    # Checkout the repository
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    # Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+        
+    # Install dependencies
+    - run: |
+        pip install -r requirements.txt
+
+
+    # Test
+    - name: Run tests
+      run: |
+        echo "Run tests"
+        
+
+    # Login to Azure
+    #- name: Azure Login
+    #  uses: azure/login@v1
+    #  with:
+    #    creds: ${{ secrets.AZURE_CREDENTIALS }}
